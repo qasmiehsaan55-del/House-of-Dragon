@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOUSE OF DRAGONS|DRAGONS</title>
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+<!-- NAVBAR  -->
+    <nav class="dragon-nav">
+    <div class="nav-logo">
+        <a href="index.html" class="logo-link">
+            <h1 class="targaryen-font">FIRE <span>&</span> BLOOD</h1>
+        </a>
+    </div>
+     <ul class="nav-links">
+            <li><a href="house.html" class="nav-item">THE HOUSE</a></li>
+            <li><a href="dragons.html" class="nav-item">DRAGONS</a></li>
+            <li><a href="history.html" class="nav-item">HISTORY</a></li>
+        </ul>
+    <div class="nav-right-cluster">
+        <div class="dna-scanner-box">
+            <label for="birth-month" class="dna-head">DNA SEQUENCE:</label>
+            <select id="birth-month" class="month-dropdown">
+                <option value="" disabled selected>SELECT MONTH</option>
+                <option value="0">JANUARY</option>
+                <option value="1">FEBRUARY</option>
+                <option value="2">MARCH</option>
+                <option value="3">APRIL</option>
+                <option value="4">MAY</option>
+                <option value="5">JUNE</option>
+                <option value="6">JULY</option>
+                <option value="7">AUGUST</option>
+                <option value="8">SEPTEMBER</option>
+                <option value="9">OCTOBER</option>
+                <option value="10">NOVEMBER</option>
+                <option value="11">DECEMBER</option>
+            </select>
+            <button onclick="findMyDragon()" class="scan-btn-dragons">SCAN DNA</button>
+        </div>
+        
+   
+    </div>
+
+    <div class="fire-border"></div>
+</nav>
+<section id="Dragons-cards"> 
+<div class="dragon-grid-container">
+<div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/caraxesD.jpg" alt="Caraxes">
+        <div class="scan-line"></div> </div>
+    
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">CARAXES</h2>
+        <div class="historic-line"></div>
+        
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">DAEMON TARGARYEN</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val threat-high">EXTREME</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">STEPSTONES, DANCE OF THE DRAGONS</span>
+            </div>
+        </div>
+        
+        <p class="dragon-bio">Known as the Blood Wyrm, he is a formidable beast, lean and red with a temper to match his rider.</p>
+    </div>
+</div>
+<div class="dragon-card-horizontal">
+        <div class="dragon-img-side">
+            <img src="assets/VERMITHOR.jpg" alt="Vermithor">
+            <div class="scan-line"></div>
+        </div>
+        <div class="dragon-info-side">
+            <h2 class="dragon-name-glow">VERMITHOR</h2>
+            <div class="historic-line"></div>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="label">RIDER</span>
+                    <span class="val">HUGH HAMMER / JAEHAERY I</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">THREAT LEVEL</span>
+                    <span class="val threat-extreme">EXTREME / MASSIVE</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">BATTLES</span>
+                    <span class="val">BATTLE OF TUMBLEDOWN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dragon-card-horizontal">
+        <div class="dragon-img-side">
+            <img src="assets/VHAGARD.jpg" alt="Vhagar">
+            <div class="scan-line"></div>
+        </div>
+        <div class="dragon-info-side">
+            <h2 class="dragon-name-glow">VHAGAR</h2>
+            <div class="historic-line"></div>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="label">RIDER</span>
+                    <span class="val">AEMOND TARGARYEN</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">THREAT LEVEL</span>
+                    <span class="val threat-extreme">GOD-TIER / ANCIENT</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">BATTLES</span>
+                    <span class="val">THE CONQUEST, DANCE OF DRAGONS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dragon-card-horizontal">
+        <div class="dragon-img-side">
+            <img src="assets/SYRAXD.jpg" alt="Syrax">
+            <div class="scan-line"></div>
+        </div>
+        <div class="dragon-info-side">
+            <h2 class="dragon-name-glow">SYRAX</h2>
+            <div class="historic-line"></div>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="label">RIDER</span>
+                    <span class="val">RHAENYRA TARGARYEN</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">THREAT LEVEL</span>
+                    <span class="val threat-high">HIGH / FORMIDABLE</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">BATTLES</span>
+                    <span class="val">DANCE OF THE DRAGONS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/melys.jpg" alt="Meleys">
+        <div class="scan-line"></div>
+    </div>
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">MELEYS</h2>
+        <div class="historic-line"></div>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">RHAENYS TARGARYEN</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val threat-high">HIGH / SWIFT</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">ROOK'S REST</span>
+            </div>
+        </div>
+        <p class="dragon-bio">Known as the Red Queen, she is one of the swiftest dragons in the realm, fearsome and old.</p>
+    </div>
+</div>
+
+<div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/sunfyred.jpg" alt="Sunfyre">
+        <div class="scan-line"></div>
+    </div>
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">SUNFYRE</h2>
+        <div class="historic-line"></div>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">AEGON II TARGARYEN</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val threat-high">HIGH / RADIANT</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">ROOK'S REST</span>
+            </div>
+        </div>
+        <p class="dragon-bio">The most beautiful dragon ever seen, with gold scales that shine like the sun.</p>
+    </div>
+</div>
+
+<div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/seasmoke.jpg" alt="Seasmoke">
+        <div class="scan-line"></div>
+    </div>
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">SEASMOKE</h2>
+        <div class="historic-line"></div>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">ADDAM OF HULL</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val">MEDIUM / AGILE</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">THE GULLET, TUMBLEDOWN</span>
+            </div>
+        </div>
+        <p class="dragon-bio">A pale silver-grey dragon, formerly ridden by Laenor Velaryon, now found a new bond.</p>
+    </div>
+</div>
+
+<div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/dreamfyre.jpg" alt="Dreamfyre">
+        <div class="scan-line"></div>
+    </div>
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">DREAMFYRE</h2>
+        <div class="historic-line"></div>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">HELAENA TARGARYEN</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val threat-high">HIGH / ANCIENT</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">DEFENSE OF KING'S LANDING</span>
+            </div>
+        </div>
+        <p class="dragon-bio">A slender blue dragon with silver markings, mother to many of the younger dragons.</p>
+    </div>
+    
+</div>
+<div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/tessarion.jpg" alt="Tessarion">
+        <div class="scan-line"></div>
+    </div>
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">TESSARION</h2>
+        <div class="historic-line"></div>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">DAERON TARGARYEN</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val">MEDIUM / COBALT</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">BATTLE OF THE HONEYWINE</span>
+            </div>
+        </div>
+        <p class="dragon-bio">The Blue Queen is known for her beautiful cobalt scales and bright copper claws.</p>
+    </div>
+</div>
+
+<div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/moondancer.jpg" alt="Moondancer">
+        <div class="scan-line"></div>
+    </div>
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">MOONDANCER</h2>
+        <div class="historic-line"></div>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">BAELA TARGARYEN</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val">LOW / SCOUT</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">CHASE OF KING'S LANDING</span>
+            </div>
+        </div>
+        <p class="dragon-bio">Small, slender, and incredibly fast, Moondancer is a pale green dragon of fierce spirit.</p>
+    </div>
+</div>
+
+<div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/silverwing.jpg" alt="Silverwing">
+        <div class="scan-line"></div>
+    </div>
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">SILVERWING</h2>
+        <div class="historic-line"></div>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">ULF THE WHITE</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val threat-high">HIGH / DOCILE</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">BATTLE OF THE GULLET</span>
+            </div>
+        </div>
+        <p class="dragon-bio">A silver dragon once ridden by Queen Alysanne, known for being unusually friendly to strangers.</p>
+    </div>
+</div>
+
+<div class="dragon-card-horizontal">
+    <div class="dragon-img-side">
+        <img src="assets/arrax.jpg" alt="Arrax">
+        <div class="scan-line"></div>
+    </div>
+    <div class="dragon-info-side">
+        <h2 class="dragon-name-glow">ARRAX</h2>
+        <div class="historic-line"></div>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="label">RIDER</span>
+                <span class="val">LUCERYS VELARYON</span>
+            </div>
+            <div class="data-item">
+                <span class="label">THREAT</span>
+                <span class="val">LOW / JUVENILE</span>
+            </div>
+            <div class="data-item full-width">
+                <span class="label">BATTLES</span>
+                <span class="val">STORM'S END ENCOUNTER</span>
+            </div>
+        </div>
+        <p class="dragon-bio">A pearlescent white dragon, small but brave, tragically lost in the storm.</p>
+    </div>
+</div>
+   <div id="claim-overlay" class="claim-overlay">
+    <div class="fire-bg"></div>
+    <div class="claim-content">
+        <h2 class="sys-msg">SYSTEM SCANNING DNA...</h2>
+        
+        <div class="dragon-reveal">
+            <h1 id="matched-dragon-name" class="claimed-name"></h1>
+            
+            <div id="card-display-area"></div>
+            
+            <p class="claim-status">HAS CLAIMED YOU AS RIDER</p>
+        </div>
+        
+        <button onclick="closeClaim()" class="close-btn">RETURN TO VAULT</button>
+    </div>
+</div>
+</section>
+<footer class="grand-footer">
+    <div class="footer-container">
+        <div class="footer-column historical-text">
+            <h4 class="column-title">THE OLD DECREE</h4>
+<p> The central conflict of House of the Dragon stems from the overturning of old, patriarchal precedents regarding succession. King Viserys I breaks the traditional, "old" rule that a male heir takes precedence over a female heir by naming his daughter, Rhaenyra, as his heir.</p>
+        </div>
+
+        <div class="footer-column signature-section">
+            <div class="sig-container">
+                <span class="sig-label">MASTER OF CODES</span>
+                <h2 class="eq-signature">EQ</h2>
+           <div class="dev-socials">
+    <a href="https://www.facebook.com/ehsaan.qasmi.3/" title="facebook" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+    
+    <a href="https://www.instagram.com/e_h_s_a_a_n_here/" title="insta" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    
+    <a href="https://github.com/qasmiehsaan55-del" title="github" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+            </div>
+        </div>
+
+        <div class="footer-column modern-nav">
+            <h4 class="column-title">NAVIGATE REALM</h4>
+            <ul>
+                <li><a href="index.html">FRONT TERMINAL</a></li>
+                <li><a href="index.html#Knights">WARRIOR STATS</a></li>
+                <li><a href="index.html#history">CHRONICLES</a></li>
+                <li><a href="index.html#dragon">DRAGON VAULT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+        <div class="system-line"></div>
+        <p>&copy; 2026 VALYRIAN TECH | STAMPED BY EQ PROTOCOLS</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

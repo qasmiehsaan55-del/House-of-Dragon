@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HOUSE OF DRAGONS|THE HOUSE </title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+<nav class="dragon-nav">
+    <div class="nav-logo">
+        <a href="index.html" class="logo-link">
+            <h1 class="targaryen-font">FIRE <span>&</span> BLOOD</h1>
+        </a>
+    </div>
+    
+    <ul class="nav-links">
+        <li><a href="house.html" class="nav-item">THE HOUSE</a></li>
+        <li><a href="dragons.html" class="nav-item">DRAGONS</a></li>
+        <li><a href="history.html" class="nav-item">HISTORY</a></li>
+    </ul>
+
+    <div class="loyalty-selector">
+        <button class="claim-house">CHOOSE LOYALTY <i class="fas fa-chevron-down"></i></button>
+        <div class="loyalty-dropdown">
+            <a href="javascript:void(0)" onclick="filterTeam('all')" class="opt-all">THE DYNASTY</a>
+            <a href="javascript:void(0)" onclick="filterTeam('black')" class="opt-black">TEAM BLACK (RED)</a>
+            <a href="javascript:void(0)" onclick="filterTeam('green')" class="opt-green">TEAM GREEN</a>
+        </div>
+    </div>
+
+    <div class="fire-border"></div>
+</nav>
+<section class="house-vault">
+    <h2 id="house-title">THE ROYAL DYNASTY</h2>
+    <div class="house-grid" id="characterGrid">
+    <div class="char-card" data-team="neutral">
+    <div class="card-inner">
+        <div class="image-box">
+            <img src="assets/VISERYS I.jpg" alt="Viserys">
+        </div>
+        <div class="char-details">
+            <span class="house-name">HOUSE TARGARYEN</span>
+            <h3>VISERYS I</h3>
+            <p class="role">THE PEACEFUL KING</p>
+            
+            <div class="power-level">
+                <span>INFLUENCE</span>
+                <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+            </div>
+
+            <button class="intel-trigger" onclick="toggleIntel(this)">
+                ACCESS INTEL <i class="fas fa-microchip"></i>
+            </button>
+
+            <div class="intel-panel">
+                <div class="intel-content">
+                    <p><strong>WEAPON:</strong> Valyrian Steel Blade</p>
+                    <p><strong>DRAGON:</strong> Balerion (Deceased)</p>
+                    <p><strong>STATUS:</strong> Neutral / Ruling</p>
+                    <div class="dna-scan">DNA MATCH: 100% ROYAL BLOOD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="char-card" data-team="black">
+            <div class="card-inner">
+                <div class="image-box">
+                    <img src="assets/RHAENYRA.jpg" alt="Rhaenyra">
+                </div>
+                <div class="char-details">
+                    <span class="house-name">HOUSE TARGARYEN</span>
+                    <h3>RHAENYRA</h3>
+                    <p class="role">THE CHOSEN HEIR</p>
+                    <div class="power-level">
+                        <span>CLAIM</span>
+                        <div class="bar"><div class="fill" style="width: 95%;"></div></div>
+              
+                    </div>
+                              <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Dragonvoice Command</p>
+        <p><strong>DRAGON:</strong> Syrax (Active)</p>
+        <p><strong>STATUS:</strong> Designated Successor</p>
+        <div class="dna-scan">DNA MATCH: 99.9% TARGARYEN CORE</div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="char-card" data-team="black">
+            <div class="card-inner">
+                <div class="image-box">
+                    <img src="assets/DAEMON H.jpg" alt="Daemon">
+                </div>
+                <div class="char-details">
+                    <span class="house-name">HOUSE TARGARYEN</span>
+                    <h3>DAEMON</h3>
+                    <p class="role">ROGUE PRINCE</p>
+                    <div class="power-level">
+                        <span>THREAT</span>
+                        <div class="bar"><div class="fill" style="width: 98%;"></div></div>
+      
+                    </div>
+                                      <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Dark Sister (Valyrian Steel)</p>
+        <p><strong>DRAGON:</strong> Caraxes (The Blood Wyrm)</p>
+        <p><strong>STATUS:</strong> High Combat Threat</p>
+        <div class="dna-scan">DNA MATCH: 100% PURE VALYRIAN</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="char-card" data-team="green">
+            <div class="card-inner">
+                <div class="image-box">
+                    <img src="assets/ALICENT.jpg" alt="Alicent">
+                </div>
+                <div class="char-details">
+                    <span class="house-name">HOUSE HIGHTOWER</span>
+                    <h3>ALICENT</h3>
+                    <p class="role">QUEEN MOTHER</p>
+                    <div class="power-level">
+                        <span>POLITICS</span>
+                        <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+                        
+                    </div>
+                    <button class="intel-trigger" onclick="toggleIntel(this)">
+                ACCESS INTEL <i class="fas fa-microchip"></i>
+            </button>
+            <div class="intel-panel">
+                <div class="intel-content">
+                    <p><strong>WEAPON:</strong> Political Influence / Faith</p>
+                    <p><strong>DRAGON:</strong> None (Relies on Vhagar/Sunfyre)</p>
+                    <p><strong>STATUS:</strong> Queen Consort / Strategist</p>
+                    <div class="dna-scan">DNA MATCH: HUMAN (HOUSE HIGHTOWER)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="char-card" data-team="green">
+            <div class="card-inner">
+                <div class="image-box">
+                    <img src="assets/AEGON II.jpg" alt="Aegon">
+                </div>
+                <div class="char-details">
+                    <span class="house-name">HOUSE TARGARYEN</span>
+                    <h3>AEGON II</h3>
+                    <p class="role">THE USURPER</p>
+                    <div class="power-level">
+                        <span>LOYALTY</span>
+                        <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+                    </div>
+                    <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Blackfyre (Ancient Valyrian Steel)</p>
+        <p><strong>DRAGON:</strong> Sunfyre (The Golden)</p>
+        <p><strong>STATUS:</strong> Crowned King / High Conflict</p>
+        <div class="dna-scan">DNA MATCH: 99.7% TARGARYEN</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="char-card" data-team="green">
+            <div class="card-inner">
+                <div class="image-box">
+                    <img src="assets/AEMOND.jpg" alt="Aemond">
+                </div>
+                <div class="char-details">
+                    <span class="house-name">HOUSE TARGARYEN</span>
+                    <h3>AEMOND</h3>
+                    <p class="role">THE KINSLAYER</p>
+                    <div class="power-level">
+                        <span>WARFARE</span>
+                        <div class="bar"><div class="fill" style="width: 96%;"></div></div>
+                    </div>
+                    <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Sapphire Eye / Master Swordsman</p>
+        <p><strong>DRAGON:</strong> Vhagar (The War Bitch)</p>
+        <p><strong>STATUS:</strong> Protector of the Realm</p>
+        <div class="dna-scan">DNA MATCH: 99.8% ANCIENT BLOOD</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="char-card" data-team="black">
+            <div class="card-inner">
+                <div class="image-box">
+                    <img src="assets/RHAENYS.jpg" alt="Rhaenys">
+                </div>
+                <div class="char-details">
+                    <span class="house-name">HOUSE TARGARYEN</span>
+                    <h3>RHAENYS</h3>
+                    <p class="role">THE QUEEN WHO NEVER WAS</p>
+                    <div class="power-level">
+                        <span>WISDOM</span>
+                        <div class="bar"><div class="fill" style="width: 88%;"></div></div>
+                    </div>
+                    <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Political Wisdom / Authority</p>
+        <p><strong>DRAGON:</strong> Meleys (The Red Queen)</p>
+        <p><strong>STATUS:</strong> High Council Member</p>
+        <div class="dna-scan">DNA MATCH: 100% ROYAL LINEAGE</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="char-card" data-team="green">
+            <div class="card-inner">
+                <div class="image-box">
+                    <img src="assets/OTTO hightower.jpg" alt="Otto">
+                </div>
+                <div class="char-details">
+                    <span class="house-name">HOUSE HIGHTOWER</span>
+                    <h3>OTTO</h3>
+                    <p class="role">HAND OF THE KING</p>
+                    <div class="power-level">
+                        <span>SCHEMES</span>
+                        <div class="bar"><div class="fill" style="width: 94%;"></div></div>
+                    </div>
+                    <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Manipulation / Statecraft</p>
+        <p><strong>DRAGON:</strong> None (Strategic Asset)</p>
+        <p><strong>STATUS:</strong> Hand of the King</p>
+        <div class="dna-scan">DNA MATCH: HUMAN (HOUSE HIGHTOWER)</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="char-card" data-team="black">
+    <div class="card-inner">
+        <div class="image-box">
+            <img src="assets/BAELA.jpg" alt="Baela">
+        </div>
+        <div class="char-details">
+            <span class="house-name">HOUSE TARGARYEN</span>
+            <h3>BAELA</h3>
+            <p class="role">LADY OF DRIFTMARK</p>
+            <div class="power-level">
+                <span>COURAGE</span>
+                <div class="bar"><div class="fill" style="width: 82%;"></div></div>
+            </div>
+            <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Valyrian Courage</p>
+        <p><strong>DRAGON:</strong> Moondancer (Swift)</p>
+        <p><strong>STATUS:</strong> Lady of Driftmark</p>
+        <div class="dna-scan">DNA MATCH: 99.5% VALYRIAN</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+<div class="char-card" data-team="green">
+    <div class="card-inner">
+        <div class="image-box">
+            <img src="assets/CRISTON COLE.jpg" alt="Criston">
+        </div>
+        <div class="char-details">
+            <span class="house-name">HOUSE COLE</span>
+            <h3>CRISTON COLE</h3>
+            <p class="role">LORD COMMANDER</p>
+            <div class="power-level">
+                <span>COMBAT</span>
+                <div class="bar"><div class="fill" style="width: 94%;"></div></div>
+            </div>
+            <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Morningstar / Shield</p>
+        <p><strong>DRAGON:</strong> None (Anti-Dragon Specialist)</p>
+        <p><strong>STATUS:</strong> Lord Commander</p>
+        <div class="dna-scan">DNA MATCH: HUMAN (DORNISH DESCENT)</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+<div class="char-card" data-team="black">
+    <div class="card-inner">
+        <div class="image-box">
+            <img src="assets/JACAERYS.jpg" alt="Jacaerys">
+        </div>
+        <div class="char-details">
+            <span class="house-name">HOUSE VELARYON</span>
+            <h3>JACAERYS</h3>
+            <p class="role">PRINCE OF DRAGONSTONE</p>
+            <div class="power-level">
+                <span>DIPLOMACY</span>
+                <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+            </div>
+            <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Diplomacy / Vermax</p>
+        <p><strong>DRAGON:</strong> Vermax (Active)</p>
+        <p><strong>STATUS:</strong> Heir to the Iron Throne</p>
+        <div class="dna-scan">DNA MATCH: 99.2% VALYRIAN-STRONG</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+<div class="char-card" data-team="green">
+    <div class="card-inner">
+        <div class="image-box">
+            <img src="assets/HELAENA.jpg" alt="Helaena">
+        </div>
+        <div class="char-details">
+            <span class="house-name">HOUSE TARGARYEN</span>
+            <h3>HELAENA</h3>
+            <p class="role">THE DREAMER QUEEN</p>
+            <div class="power-level">
+                <span>FORESIGHT</span>
+                <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+            </div>
+            <button class="intel-trigger" onclick="toggleIntel(this)">
+    ACCESS INTEL <i class="fas fa-microchip"></i>
+</button>
+<div class="intel-panel">
+    <div class="intel-content">
+        <p><strong>WEAPON:</strong> Prophetic Dreams (Hele-Vision)</p>
+        <p><strong>DRAGON:</strong> Dreamfyre (Ancient)</p>
+        <p><strong>STATUS:</strong> Queen Consort / Dreamer</p>
+        <div class="dna-scan">DNA MATCH: 100% PURE DREAMER GENE</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+<footer class="grand-footer">
+    <div class="footer-container">
+        <div class="footer-column historical-text">
+            <h4 class="column-title">THE OLD DECREE</h4>
+<p>During the Faith Militant uprising, King Maegor I enacted laws that forbade holy men from carrying arms. He furthered these by placing bounties (a gold dragon for a Warrior's Son, a silver stag for a Poor Fellow) on the heads of those who defied him.
+</p>
+        </div>
+
+        <div class="footer-column signature-section">
+            <div class="sig-container">
+                <span class="sig-label">MASTER OF CODES</span>
+                <h2 class="eq-signature">EQ</h2>
+           <div class="dev-socials">
+    <a href="https://www.facebook.com/ehsaan.qasmi.3/" title="facebook" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+    
+    <a href="https://www.instagram.com/e_h_s_a_a_n_here/" title="insta" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    
+    <a href="https://github.com/qasmiehsaan55-del" title="github" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+            </div>
+        </div>
+
+        <div class="footer-column modern-nav">
+            <h4 class="column-title">NAVIGATE REALM</h4>
+            <ul>
+                <li><a href="index.html">FRONT TERMINAL</a></li>
+                <li><a href="index.html#Knights">WARRIOR STATS</a></li>
+                <li><a href="index.html#history">CHRONICLES</a></li>
+                <li><a href="index.html#dragon">DRAGON VAULT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+        <div class="system-line"></div>
+        <p>&copy; 2026 VALYRIAN TECH | STAMPED BY EQ PROTOCOLS</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

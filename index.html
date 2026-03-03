@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOUSE OF DRAGONS</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <!-- CLAIM THE THRONE SECTION  -->
+    <div id="quiz-overlay" class="quiz-overlay">
+        <div class="quiz-container" id="quiz-box">
+            <button class="close-quiz" onclick="closeQuiz()">&times;</button>
+
+            <div id="quiz-content">
+                <h2 class="quiz-title">THE TRIAL BY FIRE</h2>
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <div class="scanline"></div>
+                <div id="question-container">
+                    <p id="question-text" class="question-text">Loading Trial...</p>
+                    <div id="answer-buttons" class="answer-grid">
+                    </div>
+                </div>
+            </div>
+
+            <div id="result-screen" style="display: none;">
+                <h1 id="result-header"></h1>
+                <p id="result-message"></p>
+
+                <div class="result-actions">
+                    <button onclick="restartQuiz()" class="claim-btn">TRY AGAIN</button>
+                    <button onclick="closeQuiz()" class="claim-btn">ABANDON</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- NAVBAR SECTION  -->
+    <nav class="dragon-nav">
+        <div class="nav-logo">
+            <a href="index.html" class="logo-link">
+                <h1 class="targaryen-font">FIRE <span>&</span> BLOOD</h1>
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="house.html" class="nav-item">THE HOUSE</a></li>
+            <li><a href="dragons.html" class="nav-item">DRAGONS</a></li>
+            <li><a href="history.html" class="nav-item">HISTORY</a></li>
+            <a href="javascript:void(0)" onclick="startThroneQuiz()" class="claim-btn-nav nav-btn-style nav-btn">CLAIM
+                THE THRONE</a>
+        </ul>
+
+        <div class="fire-border"></div>
+    </nav>
+
+    <section class="hero-dragon">
+        <div class="smoke-overlay"></div>
+        <div class="embers-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="hero-content">
+            <h2 class="subtitle">THE REIGN OF FIRE BEGINS</h2>
+            <h1 class="main-title">HOUSE <span class="of">OF THE</span> DRAGON</h1>
+            <p class="description">
+                "Dreams didn't make us kings. Dragons did."
+            </p>
+
+            <div class="hero-btns">
+                <a href="#dragon" class="btn-primary">EXPLORE DRAGONS</a>
+                <a href="#house" class="btn-secondary">VIEW LINEAGE</a>
+            </div>
+        </div>
+    </section>
+    <section id="house" class="house-legacy">
+        <div class="house-container">
+            <div class="house-text">
+                <h2 class="subtitle">House Targaryen</h2>
+                <h1 class="motto-title">FIRE & <span class="blood">BLOOD</span></h1>
+                <p class="legacy-desc">
+                    For centuries, the Targaryens sat upon the Iron Throne,
+                    ruling with the strength of dragons and the purity of Valyrian blood.
+                </p>
+                <div class="house-stats">
+                    <div class="stat-item"><strong>300y</strong><span>Dynasty</span></div>
+                    <div class="stat-item"><strong>17</strong><span>Dragons</span></div>
+                    <div class="stat-item"><strong>1</strong><span>Throne</span></div>
+                </div>
+
+                <div class="members-cta">
+                    <a href="house.html" class="bloodline-btn">
+                        EXPLORE THE BLOODLINE <span class="fire-icon">🔥</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sigil-container">
+                <div class="sigil-glow"></div>
+                <img src="assets/SIGIL.png" alt="Targaryen Sigil" class="sigil-img">
+            </div>
+        </div>
+    </section>
+    <section id="dragon" class="dragon-showcase">
+        <div class="section-header">
+            <p class="subtitle">ANCIENT BEASTS</p>
+            <h1 class="section-title">THE CONQUERORS</h1>
+        </div>
+
+        <div class="dragon-cards-container">
+            <div class="vintage-card">
+                <div class="card-inner">
+                    <div class="dragon-img syrax"></div>
+                    <div class="card-content">
+                        <h3>SYRAX</h3>
+                        <p>The Golden Queen of Rhaenyra Targaryen. Swift and formidable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vintage-card">
+                <div class="card-inner">
+                    <div class="dragon-img caraxes"></div>
+                    <div class="card-content">
+                        <h3>CARAXES</h3>
+                        <p>The Blood Wyrm. Deformed, terrifying, and fiercely loyal to Daemon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vintage-card">
+                <div class="card-inner">
+                    <div class="dragon-img vhagar"></div>
+                    <div class="card-content">
+                        <h3>VHAGAR</h3>
+                        <p>The Hoary Old Bitch. A survivor of a hundred battles and the Conquest.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vintage-card">
+                <div class="card-inner">
+                    <div class="dragon-img sunfyre"></div>
+                    <div class="card-content">
+                        <h3>SUNFYRE</h3>
+                        <p>The Golden. Said to be the most beautiful dragon ever to fly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="explore-more-container">
+                <a href="dragons.html" class="main-explore-btn">
+                    EXPLORE THE PIT <span>&rarr;</span>
+                </a>
+            </div>
+    </section>
+    <section id="history" class="history-scroll-section">
+        <div class="history-header">
+            <h2 class="subtitle">The Chronicles</h2>
+            <h1 class="history-main-title">ANCIENT <span class="gold">LEGACY</span></h1>
+        </div>
+
+        <div class="scroll-wrapper">
+            <div class="history-scroll">
+                <div class="scroll-edge"></div>
+                <div class="scroll-paper">
+                    <div class="scroll-title">AEGON'S CONQUEST</div>
+                    <div class="scroll-detail">
+                        <span class="year">2 BC</span>
+                        <p>Aegon I Targaryen, along with his sister-wives Visenya and Rhaenys, descended upon Westeros with 
+    their three dragons: Balerion, Vhagar, and Meraxes. From the burning of Harrenhal to the Field of Fire, 
+    they united six of the Seven Kingdoms under one crown, forging the Iron Throne from the swords of 
+    their fallen enemies, quenched in dragonflame.</p>
+                    </div>
+                </div>
+                <div class="scroll-edge"></div>
+            </div>
+
+            <div class="history-scroll active">
+                <div class="scroll-edge"></div>
+                <div class="scroll-paper">
+                    <div class="scroll-title">THE GREAT COUNCIL</div>
+                    <div class="scroll-detail">
+                        <span class="year">101 AC</span>
+                        <p>Following the death of Prince Aemon, King Jaehaerys I summoned over a thousand lords to Harrenhal 
+    to prevent a civil war. In a choice that would haunt the dynasty for generations, the Council 
+    rejected the claim of Princess Rhaenys and her son Laenor, favoring Prince Viserys Targaryen. 
+    This established the precedent that the Iron Throne could not pass to a woman, nor through 
+    a woman to her male descendants.<p>
+                    </div>
+                </div>
+                <div class="scroll-edge"></div>
+            </div>
+
+            <div class="history-scroll active">
+                <div class="scroll-edge"></div>
+                <div class="scroll-paper">
+                    <div class="scroll-title">BATTLE AT ROOK'S REST</div>
+                    <div class="scroll-detail">
+                        <span class="year">129 AC</span>
+                        <p>The first true clash of the Titans. Princess Rhaenys and her dragon Meleys were 
+                ambushed by King Aegon II on Sunfyre and Prince Aemond on the monstrous Vhagar. 
+                The sky burned as Meleys fell, but the cost was high—the King was left broken 
+                and charred, and the Green faction lost its momentum in a sea of dragonfire.</p>
+                    </div>
+                </div>
+                <div class="scroll-edge"></div>
+            </div>
+            <div class="history-scroll active">
+                <div class="scroll-edge"></div>
+                <div class="scroll-paper">
+                    <div class="scroll-title">THE HEIR'S TOURNAMENT</div>
+                    <div class="scroll-detail">
+                        <span class="year">112 AC</span>
+                        <p>A celebration of blood and loss. While knights tilted in the streets of King's Landing, 
+                Queen Aemma Arryn died in childbed, leaving King Viserys without a male heir. 
+                In his grief and desperation, he named Princess Rhaenyra as his successor, 
+                shattering centuries of tradition and sowing the seeds of civil war. </p>
+                    </div>
+                </div>
+                <div class="scroll-edge"></div>
+            </div>
+
+            <div class="history-scroll">
+                <div class="scroll-edge"></div>
+                <div class="scroll-paper">
+                    <div class="scroll-title">DANCE OF THE DRAGONS</div>
+                    <div class="scroll-detail">
+                        <span class="year">129 AC</span>
+                        <p>Upon the death of King Viserys I, the realm split into two factions: the Blacks, led by Queen Rhaenyra, 
+    and the Greens, supporting King Aegon II. This brutal civil war saw brother fight brother and 
+    dragon tear dragon across the Seven Kingdoms. It was a dance of death that decimated the 
+    Targaryen bloodline and led to the tragic extinction of the world's last remaining dragons.</p>
+                    </div>
+                </div>
+                <div class="scroll-edge"></div>
+            </div>
+        </div>
+        <div class="history-footer">
+            <button class="historic-modern-btn">
+                <a href="history.html" class="history-btn"><span class="btn-text">UNFOLD THE ANCIENT SCROLLS</span></a>
+                <span class="btn-glitch"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="knights-carousel" id="Knights">
+        <h2 class="section-title">WARRIORS OF THE DYNASTY: STATS</h2>
+
+        <div class="carousel-wrapper">
+            <div class="knight-card">
+                <div class="knight-image">
+                    <img src="assets/DEAMON.png" alt="Daemon">
+                    <div class="rank-tag">ROGUE PRINCE</div>
+                </div>
+                <div class="knight-info">
+                    <h4>DAEMON TARGARYEN</h4>
+                    <div class="stats-grid">
+                        <div class="stat"><span>WEAPON:</span> Dark Sister (Valyrian)</div>
+                        <div class="stat"><span>BATTLES:</span> War for the Stepstones</div>
+                        <div class="stat"><span>1v1 WINS:</span> 42</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="knight-card">
+                <div class="knight-image">
+                    <img src="assets/sir criston.png" alt="Criston">
+                    <div class="rank-tag">KINGMAKER</div>
+                </div>
+                <div class="knight-info">
+                    <h4>SIR CRISTON COLE</h4>
+                    <div class="stats-grid">
+                        <div class="stat"><span>WEAPON:</span> Morningstar</div>
+                        <div class="stat"><span>BATTLES:</span> Tourney at King's Landing</div>
+                        <div class="stat"><span>1v1 WINS:</span> 38</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="knight-card">
+                <div class="knight-image">
+                    <img src="assets/aemond.png" alt="Aemond">
+                    <div class="rank-tag">THE KINSLAYER</div>
+                </div>
+                <div class="knight-info">
+                    <h4>AEMOND TARGARYEN</h4>
+                    <div class="stats-grid">
+                        <div class="stat"><span>WEAPON:</span> Longsword</div>
+                        <div class="stat"><span>BATTLES:</span> Siege of Storm's End</div>
+                        <div class="stat"><span>1v1 WINS:</span> 25</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="knight-card">
+                <div class="knight-image">
+                    <img src="assets/sir harwin.png" alt="Harwin">
+                    <div class="rank-tag">BREAKBONES</div>
+                </div>
+                <div class="knight-info">
+                    <h4>SIR HARWIN STRONG</h4>
+                    <div class="stats-grid">
+                        <div class="stat"><span>WEAPON:</span> Mace / Hands</div>
+                        <div class="stat"><span>BATTLES:</span> City Watch Patrols</div>
+                        <div class="stat"><span>1v1 WINS:</span> 30</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="knight-card">
+                <div class="knight-image">
+                    <img src="assets/sir erryk.png" alt="Erryk">
+                    <div class="rank-tag">OATHKEEPER</div>
+                </div>
+                <div class="knight-info">
+                    <h4>SIR ERRYK CARGYLL</h4>
+                    <div class="stats-grid">
+                        <div class="stat"><span>WEAPON:</span> Kingsguard Steel</div>
+                        <div class="stat"><span>BATTLES:</span> Fall of King's Landing</div>
+                        <div class="stat"><span>1v1 WINS:</span> 22</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="knight-card">
+                <div class="knight-image sir_arryk">
+                    <img src="assets/sir arryk.png" alt="Arryk">
+                    <div class="rank-tag">THE LOYAL</div>
+                </div>
+                <div class="knight-info">
+                    <h4>SIR ARRYK CARGYLL</h4>
+                    <div class="stats-grid">
+                        <div class="stat"><span>WEAPON:</span> Kingsguard Steel</div>
+                        <div class="stat"><span>BATTLES:</span> Defense of the Greens</div>
+                        <div class="stat"><span>1v1 WINS:</span> 21</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="grand-footer">
+        <div class="footer-container">
+            <div class="footer-column historical-text">
+                <h4 class="column-title">THE OLD DECREE</h4>
+                <p>"Upon these digital sands, the dragon's shadow remains. Built in the year 281 AC, let it be known
+                    that fire and blood created this realm, and through the glass candles of AI, it shall endure for
+                    eternity."</p>
+            </div>
+
+            <div class="footer-column signature-section">
+                <div class="sig-container">
+                    <span class="sig-label">MASTER OF CODES</span>
+                    <h2 class="eq-signature">EQ</h2>
+                    <div class="dev-socials">
+                        <a href="https://www.facebook.com/ehsaan.qasmi.3/"" title=" facebook" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/e_h_s_a_a_n_here/" title="insta" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://github.com/qasmiehsaan55-del" title="github" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column modern-nav">
+                <h4 class="column-title">NAVIGATE REALM</h4>
+                <ul>
+                    <li><a href="index.html">FRONT TERMINAL</a></li>
+                    <li><a href="#Knights">WARRIOR STATS</a></li>
+                    <li><a href="#history">CHRONICLES</a></li>
+                    <li><a href="#dragon">DRAGON VAULT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="system-line"></div>
+            <p>&copy; 2026 VALYRIAN TECH | STAMPED BY EQ PROTOCOLS</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
